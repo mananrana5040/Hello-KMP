@@ -21,21 +21,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import org.jetbrains.compose.resources.painterResource
 
-import hellokmp.composeapp.generated.resources.Res
-import hellokmp.composeapp.generated.resources.compose_multiplatform
-import hellokmp.composeapp.generated.resources.news_app
-
 @Composable
-@Preview
-fun App() {
+fun App(
+    batteryManager: BatteryManager
+) {
     MaterialTheme {
         Column (
-            Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primary),
+            Modifier.fillMaxSize(),
            horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Image(painter = painterResource(Res.drawable.news_app), null, modifier = Modifier.height(100.dp).width(100.dp))
-            Text(text = "Hello World Compose!")
+            Text(text = "The current battery level is ${batteryManager.getBatteryLevel()}")
         }
     }
 }
