@@ -16,6 +16,8 @@ kotlin = "2.3.0"
 kotlinx-coroutines = "1.10.2"
 material3 = "1.10.0-alpha05"
 oshiCore = "6.10.0"
+datastorePreferences = "1.2.0"
+
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -37,6 +39,9 @@ compose-components-resources = { module = "org.jetbrains.compose.components:comp
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 oshi-core = {module = "com.github.oshi:oshi-core", version.ref = "oshiCore"}
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastorePreferences" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
