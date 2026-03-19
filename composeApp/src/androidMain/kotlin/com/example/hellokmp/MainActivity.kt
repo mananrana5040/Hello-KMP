@@ -14,7 +14,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            App(batteryManager = remember { BatteryManager(applicationContext) })
+            App(
+                batteryManager = remember { BatteryManager(applicationContext) },
+                pref = createDataStore(applicationContext)
+            )
         }
     }
 }
